@@ -1,5 +1,40 @@
+GIT
+  remote: git://github.com/ctran/annotate_models.git
+  revision: bef0c494956e516540b7a9e72fa03be6576031dd
+  specs:
+    annotate (2.5.0.pre1)
+      rake
+
+GIT
+  remote: git://github.com/jnicklas/capybara.git
+  revision: c4db33a2dde43e8e6560e2519779580dd7777373
+  specs:
+    capybara (1.1.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 0.1.4)
+
+GIT
+  remote: git://github.com/mattvanhorn/nulldb.git
+  revision: deff00f76903c208a8c2e9dcc96e52bdaa1af5fb
+  specs:
+    activerecord-nulldb-adapter (0.2.1)
+      activerecord (>= 2.0.0)
+
+GIT
+  remote: git://github.com/voxdolo/decent_exposure.git
+  revision: fc344d80dfbd0b7295f58c2d1a21c923332e7743
+  branch: master
+  specs:
+    decent_exposure (2.0.0.pre)
+
 GEM
   remote: https://rubygems.org/
+  remote: http://gems.rubyforge.org/
+  remote: http://gems.github.com/
   specs:
     actionmailer (3.2.6)
       actionpack (= 3.2.6)
@@ -28,8 +63,17 @@ GEM
     activesupport (3.2.6)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.2.8)
     arel (3.0.2)
+    awesome_print (1.0.2)
+    bourbon (2.1.1)
+      sass (>= 3.1)
     builder (3.0.0)
+    carrierwave (0.6.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+    childprocess (0.3.3)
+      ffi (~> 1.0.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -37,24 +81,90 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    colored (1.2)
+    crack (0.3.1)
+    cucumber (1.2.1)
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 2.11.0)
+      json (>= 1.4.6)
+    cucumber-rails (1.3.0)
+      capybara (>= 1.1.2)
+      cucumber (>= 1.1.8)
+      nokogiri (>= 1.5.0)
+    daemons (1.1.8)
+    dalli (2.1.0)
+    database_cleaner (0.8.0)
+    diff-lcs (1.1.3)
+    display_case (0.0.3)
+    email_spec (1.2.1)
+      mail (~> 2.2)
+      rspec (~> 2.0)
     erubis (2.7.0)
+    eventmachine (0.12.10)
+    excon (0.14.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fabrication (2.0.3)
+    faker (1.0.1)
+      i18n (~> 0.4)
+    ffi (1.0.11)
+    flog (2.5.3)
+      ruby_parser (~> 2.0)
+      sexp_processor (~> 3.0)
+    fog (1.4.0)
+      builder
+      excon (~> 0.14.0)
+      formatador (~> 0.2.0)
+      mime-types
+      multi_json (~> 1.0)
+      net-scp (~> 1.0.4)
+      net-ssh (>= 2.1.3)
+      nokogiri (~> 1.5.0)
+      ruby-hmac
+    formatador (0.2.3)
+    gherkin (2.11.1)
+      json (>= 1.4.6)
+    haml (3.1.6)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
+    highline (1.6.13)
     hike (1.2.1)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.7.3)
+    launchy (2.1.0)
+      addressable (~> 2.2.6)
+    libwebsocket (0.1.3)
+      addressable
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    mini_magick (3.4)
+      subexec (~> 0.2.1)
     multi_json (1.3.6)
+    multi_xml (0.5.1)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-ssh (2.5.2)
+    newrelic_rpm (3.4.0.1)
+    nokogiri (1.5.5)
     pg (0.14.0)
+    pickler (0.2.1)
+      crack (>= 0.1.8)
     polyglot (0.3.3)
+    progressbar (0.11.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -70,6 +180,14 @@ GEM
       activesupport (= 3.2.6)
       bundler (~> 1.0)
       railties (= 3.2.6)
+    rails_best_practices (1.10.1)
+      activesupport
+      awesome_print
+      colored
+      erubis
+      i18n
+      progressbar
+      sexp_processor
     railties (3.2.6)
       actionpack (= 3.2.6)
       activesupport (= 3.2.6)
@@ -80,15 +198,73 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    reek (1.2.12)
+      ripper_ruby_parser (~> 0.0.7)
+      ruby2ruby (~> 1.2.5)
+      ruby_parser (~> 2.0)
+      sexp_processor (~> 3.0)
+    responders (0.9.1)
+      railties (~> 3.1)
+    ripper_ruby_parser (0.0.8)
+      sexp_processor (~> 3.0)
+    rspec (2.10.0)
+      rspec-core (~> 2.10.0)
+      rspec-expectations (~> 2.10.0)
+      rspec-mocks (~> 2.10.0)
+    rspec-core (2.10.1)
+    rspec-expectations (2.10.0)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.10.1)
+    rspec-rails (2.10.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.10.0)
+    ruby-hmac (0.4.0)
+    ruby2ruby (1.2.5)
+      ruby_parser (~> 2.0)
+      sexp_processor (~> 3.0)
+    ruby_parser (2.3.1)
+      sexp_processor (~> 3.0)
+    rubyzip (0.9.9)
     sass (3.1.20)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    selenium-webdriver (2.24.0)
+      childprocess (>= 0.2.5)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
+      rubyzip
+    sexp_processor (3.2.0)
+    shoulda-matchers (1.2.0)
+      activesupport (>= 3.0.0)
+    simple_form (2.0.2)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+    simplecov (0.6.4)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    subexec (0.2.2)
+    tddium (1.5.1)
+      highline
+      json
+      launchy
+      tddium_client (~> 0.2.0)
+      thor
+    tddium_client (0.2.0)
+      httparty (>= 0.8.1)
+      json
+    thin (1.4.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.15.4)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -98,14 +274,51 @@ GEM
     uglifier (1.2.6)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
+    vcr (2.2.2)
+    webmock (1.8.7)
+      addressable (>= 2.2.7)
+      crack (>= 0.1.7)
+    xpath (0.1.4)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-nulldb-adapter!
+  annotate!
+  bourbon
+  capybara!
+  carrierwave
   coffee-rails (~> 3.2.1)
+  cucumber-rails
+  dalli
+  database_cleaner
+  decent_exposure!
+  display_case
+  email_spec
+  fabrication
+  faker
+  flog
+  fog
+  haml-rails
   jquery-rails
+  launchy
+  mini_magick
+  newrelic_rpm
   pg
-  rails (= 3.2.6)
+  pickler
+  rails
+  rails_best_practices
+  reek
+  responders
+  rspec-rails
   sass-rails (~> 3.2.3)
+  shoulda-matchers
+  simple_form
+  simplecov
+  tddium
+  thin
   uglifier (>= 1.0.3)
+  vcr
+  webmock
