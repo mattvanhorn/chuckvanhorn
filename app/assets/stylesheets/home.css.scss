@@ -1,11 +1,13 @@
 html {
   background: #000;
+  color: #FFF;
 }
-#home {
+body {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
+}
+#home {
   background: image-url('portrait.jpg');
-  color: #FFF;
   width: 600px;
   height: 559px;
   margin: 0 auto;

@@ -1,0 +1,47 @@
+#biography {
+  color: #FFF;
+  width: 610px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+#quotes {
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  width: 200px;
+  float: left;
+  margin-right: 5px;
+  blockquote {
+    margin: 0 0 25px 0;
+    padding: auto 0;
+    font-style: italic;
+    p {
+      margin-bottom: 5px;
+    }
+    p:before {
+      content: '\201C';
+    };
+    p:after {
+      content: '\201D';
+    };
+    cite {
+      margin-left: 10px;
+    }
+  }
+}
+
+#summary {
+  width: 400px;
+  float: right;
+  #signature-grey {
+    margin-top: 50px;
+    float: right;
+  }
+}
+
+img.bio-portrait {
+  float: right;
+  margin-left: 5px;
+}
