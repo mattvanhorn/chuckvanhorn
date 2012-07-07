@@ -1,1 +1,1 @@
-== Welcome to Chuck Van Horn's website
+== Welcome to Chuck Van Horn's website, now on Heroku
