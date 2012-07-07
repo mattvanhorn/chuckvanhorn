@@ -8,6 +8,14 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+ *  require_self
+ *  require_tree .
  */
+@import "bootstrap";
+@import "home";
+@import "biography";
+@import "links";
+@import "paintings";
+
+/* compensate the overlap caused by bootstrap top navigation, min. 40px at the top! */
+body { padding: 60px 10px 10px 10px; }

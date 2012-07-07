@@ -1,22 +1,20 @@
 html {
-  background: #000;
   color: #FFF;
-}
-body {
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
+
+  body {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    background: #000;
+  }
 }
 #home {
-  background: image-url('portrait.jpg');
-  width: 600px;
-  height: 559px;
-  margin: 0 auto;
-  padding: 0 8px;
+  @include makeColumn(8,2);
+  color: #FFF;
+  background: image-url('portrait.jpg') top right no-repeat;
 }
 #bio {
-  width: 300px;
-  margin-right: 300px;
+  @include makeColumn(4);
 }
 #signature {
-  margin-top: 160px;
+  margin: 90px 0;
 }
