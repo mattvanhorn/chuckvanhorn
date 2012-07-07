@@ -1,32 +1,31 @@
 #links {
-  width: 630px;
-  margin: 0 auto;
-
+  @include makeColumn(8,2);
   h1 {
     text-align: center;
-    font-size: 36px;
+  }
+  img {
+    margin-top: 10px;
+    margin-bottom: -40px;
   }
 
-  p {
-    width: 240px;
+  p.artists {
+    @include makeColumn(3);
     float: left;
   }
 
   dl {
-    width: 340px;
-    margin-left: 20px;
-    float: right;
-    font-size: 16px;
+    @include makeColumn(4);
+    margin-top: 0;
+    padding-top: 0;
   }
+
   dt {
     margin-left: 0;
     margin-bottom: 3px;
   }
+
   dd {
     margin-left: 0;
     margin-bottom: 12px;
-  }
-  a:link,  a:visited {
-    color: #FFF;
   }
 }
