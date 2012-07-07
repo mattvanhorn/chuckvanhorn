@@ -12,6 +12,7 @@ Chuckvanhorn::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   match 'biography' => 'pages#biography', :as => :biography
   match 'links' => 'pages#links', :as => :links
+  match 'workshops' => 'pages#workshops', :as => :workshops
 
   # This route can be invoked with purchase_url(:id => product.id)
 

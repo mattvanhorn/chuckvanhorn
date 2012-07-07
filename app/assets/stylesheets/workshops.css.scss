@@ -1,0 +1,22 @@
+#workshops {
+  @include makeColumn(8,2);
+  #events {
+    @include makeColumn(5);
+    margin-left: 0;
+  }
+  #images {
+    @include makeColumn(3);
+  }
+  figure {
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+  }
+  figcaption {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+}
