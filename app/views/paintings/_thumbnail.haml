@@ -1,0 +1,6 @@
+%li[thumbnail]
+  .thumbnail
+    %figure
+      = link_to thumbnail.render_thumbnail, gallery_paintings_path(gallery)+"##{thumbnail.id}"
+    %figcaption= thumbnail.title
+    %strong= thumbnail.note

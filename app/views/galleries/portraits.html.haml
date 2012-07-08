@@ -1,0 +1,16 @@
+#portraits
+  #info
+    %h1= gallery.name
+    %p
+      Head and shoulder portraits in standard frames (16” X 20”) behind glass are
+      created from the photo of your choice.  Please allow three weeks for delivery.
+      Shipping costs are extra.  Price: $500
+      Contact me at
+      = mail_to 'vanhorn24@optonline.net'
+  #slideshow
+    %a{:href => gallery_paintings_path(gallery)}
+      = image_tag 'slides.png', :id => 'slides', :size => '119x36', :alt => 'Start Slideshow', :title => 'Start Slideshow'
+    %br
+    = image_tag 'signature-grey.png', :size => '242x132', :id => 'signature-grey', :alt => '-- Chuck Van Horn'
+  %ul.thumbnails
+    = render gallery.paintings

@@ -19,12 +19,11 @@
                 Galleries
                 %b.caret
               %ul.dropdown-menu
-                %li
-                  = link_to Gallery.first.name, gallery_paintings_path(Gallery.first)
-                %li
-                  = link_to Gallery.last.name, gallery_paintings_path(Gallery.last)
+                - Gallery.where("name IN ('Gallery 1', 'Gallery 2')").order('name ASC').each do |gallery|
+                  %li
+                    = link_to gallery.name, gallery_path(gallery)
 
-            %li= link_to 'Portraits', '#'
+            %li= link_to 'Portraits', portraits_path
             %li= link_to 'Biography', biography_path
             %li= link_to 'Blog', '#'
             %li= link_to 'Links', links_path

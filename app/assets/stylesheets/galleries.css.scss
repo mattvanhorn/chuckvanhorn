@@ -1,0 +1,43 @@
+#gallery {
+  @include makeColumn(10,1)
+}
+
+#info {
+  @include makeColumn(6);
+  margin-left: 0;
+  float: left;
+}
+
+#slideshow {
+  @include makeColumn(4);
+  float: left;
+}
+
+li.painting {
+  .thumbnail {
+    @include border-radius(0);
+    border-color: #333;
+    width: 220px;
+    height: 220px;
+    text-align: center;
+
+    figure {
+      margin: 8px 0;
+    }
+
+    figcaption {
+    }
+
+    strong {
+      color: #F00;
+    }
+  }
+}
+
+#portraits {
+  @include makeColumn(10,1);
+  li.painting .thumbnail {
+    height: 240px;
+  }
+}
+

@@ -5,6 +5,14 @@ class PaintingExhibit < DisplayCase::Exhibit
     object.class.name == 'Painting'
   end
 
+  def render(*args)
+    if in_view.controller_name == 'paintings'
+      in_view.render :partial => 'paintings/slide', :object => self
+    else
+      in_view.render :partial => 'paintings/thumbnail', :object => self
+    end
+  end
+
   def render_thumbnail
     make_image_tag image.small
   end

@@ -6,4 +6,8 @@ class PaintingsController < ApplicationController
   def index
     exhibit_exposed :paintings
   end
+
+  def show
+    exhibit_exposed :painting
+  end
 end

@@ -1,13 +1,8 @@
 #wrapper
-  #carousel
-    %span.empty
-    / trick the carousel to start 1 item to the right
+  %ul#carousel
 
     = render paintings
 
-
-    %span.empty
-    / trick the carousel to end 1 item to the left
 #bar
   %a#prev{:href => "#"} &laquo;
   %a#next{:href => "#"} &raquo;
@@ -17,20 +12,34 @@
   function getMinMarge( newItems ) {
     var center  = newItems.eq(0).outerWidth(true) + (newItems.eq(1).outerWidth(true) / 2);
     var minMarg = ($(window).width() / 2) - center;
-
     return minMarg;
   }
-  function showTitle( item ) {
-    $('#title').html( item.attr( 'alt' ) );
+
+  function getStartSlide() {
+    var slide_id = '#painting_' + window.location.hash.slice(1);
+    var index = jQuery.inArray( $(slide_id)[0], $('#carousel li'));
+    if (index >= 0) {
+      index = index - 1;
+    }
+    return index;
   }
+
+  function showTitle( item ) {
+    $('#title').html( item.find('img').attr( 'alt' ) );
+  }
+
   $(function() {
     $('#carousel').carouFredSel({
       width: 10000, //  should be wide enough ;)
       height: 790,
       align: false,
-      circular: false,
-      infinite: false,
-      items: 3,
+      circular: true,
+      infinite: true,
+      items: {
+        visible: 3,
+        minimum: 1,
+        start: getStartSlide()
+      },
       prev: '#prev',
       next: '#next',
       auto: false,
@@ -54,12 +63,12 @@
         $(this).parent().css({
           'marginLeft': getMinMarge( items )
         });
-        $(this).children().not(':eq(1)').css({
-          'opacity': 0.2
-        });
+        if($(this).children().length > 1){
+          $(this).children().not(':eq(1)').css({
+            'opacity': 0.2
+          });
+        }
         showTitle( items.eq(1) );
-        $("#carousel").trigger("slideTo", window.location.hash);
-
       }
     });
   });

@@ -13,13 +13,14 @@ Chuckvanhorn::Application.routes.draw do
   match 'biography' => 'pages#biography', :as => :biography
   match 'links' => 'pages#links', :as => :links
   match 'workshops' => 'pages#workshops', :as => :workshops
-
+  match 'portraits' => 'galleries#portraits', :as => :portraits, :id => Gallery.find_by_name('Portraits').try(:id)
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :galleries, :only => [:show] do
-    resources :paintings, :only => [:index]
+    resources :paintings, :only => [:index, :show]
   end
+
   # Sample resource route with options:
   #   resources :products do
   #     member do
