@@ -1,6 +1,6 @@
 class PaintingsController < ApplicationController
   expose(:gallery)
-  expose(:paintings){ gallery.paintings.order("id ASC") }
+  expose(:paintings){ gallery.paintings.order("created_at") }
   expose(:painting)
 
   def index

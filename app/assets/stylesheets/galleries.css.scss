@@ -18,7 +18,7 @@ li.painting {
     @include border-radius(0);
     border-color: #333;
     width: 220px;
-    height: 220px;
+    height: 270px;
     text-align: center;
 
     figure {
@@ -37,7 +37,7 @@ li.painting {
 #portraits {
   @include makeColumn(10,1);
   li.painting .thumbnail {
-    height: 240px;
+    height: 270px;
   }
 }
 
