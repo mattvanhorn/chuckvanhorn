@@ -1,4 +1,4 @@
-- cache(slide) do
+- cache("slide-#{slide}") do
   %li[slide]{:style => "margin-top: #{((790-slide.image.large.height)/2)-40}px;"}
     %div
       %a{:href => gallery_painting_path(gallery, slide)}
