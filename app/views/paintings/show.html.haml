@@ -1,5 +1,6 @@
-#painting
-  %h1= painting.title
-  .image
-    = image_tag painting.image
-    %p= painting.note
+- cache(painting) do
+  #painting
+    %h1= painting.title
+    .image
+      = image_tag painting.image
+      %p= painting.note

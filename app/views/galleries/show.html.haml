@@ -12,5 +12,7 @@
       = image_tag 'slides.png', :id => 'slides', :size => '119x36', :alt => 'Start Slideshow', :title => 'Start Slideshow'
     %br
     = image_tag 'signature-grey.png', :size => '242x132', :id => 'signature-grey', :alt => '-- Chuck Van Horn'
+
+- cache("thumbnails-#{paintings.map(&:updated_at).hash}") do
   %ul.thumbnails
     = render gallery.paintings
