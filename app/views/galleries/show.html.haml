@@ -13,6 +13,6 @@
     %br
     = image_tag 'signature-grey.png', :size => '242x132', :id => 'signature-grey', :alt => '-- Chuck Van Horn'
 
-- cache("thumbnails-#{paintings.map(&:updated_at).hash}") do
+- cache("thumbnails-#{gallery.paintings.map(&:updated_at).hash}") do
   %ul.thumbnails
     = render gallery.paintings
