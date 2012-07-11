@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120707033736) do
+ActiveRecord::Schema.define(:version => 20120709215526) do
 
   create_table "galleries", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(:version => 20120707033736) do
   end
 
   add_index "paintings", ["gallery_id"], :name => "index_paintings_on_gallery_id"
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.datetime "published_at"
+    t.text     "body"
+    t.integer  "painting_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

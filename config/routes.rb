@@ -1,5 +1,6 @@
 Chuckvanhorn::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount Ckeditor::Engine => "/ckeditor"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -14,6 +15,8 @@ Chuckvanhorn::Application.routes.draw do
   match 'links' => 'pages#links', :as => :links
   match 'workshops' => 'pages#workshops', :as => :workshops
   match 'portraits' => 'galleries#portraits', :as => :portraits, :id => Gallery.find_by_name('Portraits').try(:id)
+  match 'blog' => 'blog#index', :as => :blog
+  match 'blog/post/:id' => 'blog#show', :as => :post
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):

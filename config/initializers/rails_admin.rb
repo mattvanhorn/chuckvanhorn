@@ -111,5 +111,25 @@ RailsAdmin.config do |config|
       configure :image_information do
         hide
       end
+      configure :remote_image_url do
+        visible :true
+      end
+  end
+
+  config.model Post do
+    configure :title
+    configure :body, :text do
+      ckeditor do
+        true
+      end
+    end
+    configure :painting, :belongs_to_association
+
+    list do; end
+    export do; end
+    show do; end
+    edit do; end
+    create do; end
+    update do; end
   end
 end

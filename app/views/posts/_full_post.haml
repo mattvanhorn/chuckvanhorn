@@ -1,0 +1,8 @@
+- post = full_post
+#full_post
+  - if post.painting
+    = image_tag post.painting.image.large, :size => "#{post.painting.image.large.width}x#{post.painting.image.large.height}", :alt => post.painting.title
+
+  %h1= post.title
+  %h3= post.published_at
+  #post_body= raw post.body

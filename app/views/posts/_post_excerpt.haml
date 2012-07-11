@@ -1,0 +1,11 @@
+- post  = post_excerpt
+- thumb = post.painting.image.blog_thumb if post.painting
+
+.row[post]
+  .thumb
+    - if thumb
+      = image_tag thumb, :size => "140x140", :alt => post.painting.title
+  .excerpt
+    %h1= post.title
+    %h3= post.published_at
+    = post.excerpt

@@ -1,0 +1,42 @@
+#blog {
+  header {
+    @include makeColumn(12);
+    padding-top: 40px;
+    overflow: auto;
+    margin-bottom: 40px;
+    img {
+      float: left;
+      margin: 0 10px 20px 0;
+    }
+    h1, p.intro {
+      @include makeColumn(6);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#blog_posts {
+  @include makeColumn(12);
+  .row.post {
+    margin-bottom: 20px;
+    .thumb {
+      @include makeColumn(2);
+      height: 140px;
+    }
+
+    .excerpt {
+      @include makeColumn(10);
+    }
+  }
+}
+
+#full_post {
+  @include makeColumn(8,2);
+  h1, h3, #post_body {
+    @include makeColumn(6,1);
+  }
+}
+

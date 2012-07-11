@@ -58,6 +58,11 @@ class PaintingImageUploader < CarrierWave::Uploader::Base
     process :capture_size
   end
 
+  version :blog_thumb do
+    process :resize_to_fill => [140, 140]
+    process :capture_size
+  end
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
