@@ -8,6 +8,9 @@
     %a#next{:href => "#"} &raquo;
     %span#title
 
+  <!-- Please call pinit.js only once per page -->
+  <script type="text/javascript"async defer data-pin-shape="round"data-pin-height="32"data-pin-hover="true"src="//assets.pinterest.com/js/pinit.js"></script>
+
   :javascript
     function getMinMarge( newItems ) {
       var center  = newItems.eq(0).outerWidth(true) + (newItems.eq(1).outerWidth(true) / 2);
