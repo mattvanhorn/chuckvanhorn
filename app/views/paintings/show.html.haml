@@ -4,5 +4,5 @@
   #painting
     %h1= painting.title
     .image
-      = image_tag painting.image
+      = image_tag(painting.image.url)
       %p= painting.note

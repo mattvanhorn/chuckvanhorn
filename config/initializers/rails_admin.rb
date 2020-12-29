@@ -10,6 +10,7 @@ class AdminUser
   end
 end
 
+require "nested_form/builder_mixin"
 RailsAdmin.config do |config|
 
   # If your default_local is different from :en, uncomment the following 2 lines and set your default locale here:
@@ -118,11 +119,7 @@ RailsAdmin.config do |config|
 
   config.model Post do
     configure :title
-    configure :body, :text do
-      ckeditor do
-        true
-      end
-    end
+    configure :body, :ck_editor
     configure :painting, :belongs_to_association
 
     list do; end

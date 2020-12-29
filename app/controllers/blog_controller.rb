@@ -3,10 +3,10 @@ class BlogController < ApplicationController
   expose(:post)
 
   def index
-    exhibit_exposed :posts
+    self.posts = exhibit(posts)
   end
 
   def show
-    exhibit_exposed :post
+    self.post = exhibit(post)
   end
 end

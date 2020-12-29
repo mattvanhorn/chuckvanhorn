@@ -1,8 +1,13 @@
 - post = full_post
 #full_post
+  %p= link_to 'Back', blog_path
+
   - if post.painting
-    = image_tag post.painting.image.large, :size => "#{post.painting.image.large.width}x#{post.painting.image.large.height}", :alt => post.painting.title
+    - painting = post.painting.image.large
+    = image_tag painting.url, :size => "#{painting.width}x#{painting.height}", :alt => post.painting.title
 
   %h1= post.title
   %h3= post.published_at
   #post_body= raw post.body
+  %br
+  %p= link_to 'Back', blog_path

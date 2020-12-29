@@ -4,7 +4,7 @@
 .row[post]
   .thumb
     - if thumb
-      = image_tag thumb, :size => "140x140", :alt => post.painting.title
+      = image_tag thumb.url, :size => "140x140", :alt => post.painting.title
   .excerpt
     %h1= link_to post.title, post_path(post)
     %h3= post.published_at

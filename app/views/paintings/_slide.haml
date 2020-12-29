@@ -2,7 +2,7 @@
   %li[slide]{:style => "margin-top: #{((790-slide.image.large.height)/2)-40}px;"}
     %div
       %a{:href => gallery_painting_path(gallery, slide)}
-        = image_tag slide.image.large, :size => "#{slide.image.large.width}x#{slide.image.large.height}", :alt => slide.title
+        = image_tag slide.image.large.url, :size => "#{slide.image.large.width}x#{slide.image.large.height}", :alt => slide.title
 
     %p.note
       = slide.note

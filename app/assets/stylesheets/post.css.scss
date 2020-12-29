@@ -1,6 +1,10 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
 #blog {
   header {
-    @include makeColumn(12);
+    @include make-col(12);
     padding-top: 40px;
     overflow: auto;
     margin-bottom: 40px;
@@ -9,7 +13,7 @@
       margin: 0 10px 20px 0;
     }
     h1, p.intro {
-      @include makeColumn(6);
+      @include make-col(6);
     }
     h1 {
       font-size: 3em;
@@ -19,24 +23,23 @@
 }
 
 #blog_posts {
-  @include makeColumn(12);
+  @include make-col(12);
   .row.post {
     margin-bottom: 20px;
     .thumb {
-      @include makeColumn(2);
+      @include make-col(2);
       height: 140px;
     }
 
     .excerpt {
-      @include makeColumn(10);
+      @include make-col(10);
     }
   }
 }
 
 #full_post {
-  @include makeColumn(8,2);
+  @include make-col(8,2);
   h1, h3, #post_body {
-    @include makeColumn(6,1);
+    @include make-col(6,1);
   }
 }
-

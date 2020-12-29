@@ -4,10 +4,10 @@ class PaintingsController < ApplicationController
   expose(:painting)
 
   def index
-    exhibit_exposed :paintings
+    self.paintings = exhibit(paintings)
   end
 
   def show
-    exhibit_exposed :painting
+    self.painting = exhibit(painting)
   end
 end

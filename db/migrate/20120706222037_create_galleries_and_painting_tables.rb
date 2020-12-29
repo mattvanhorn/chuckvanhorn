@@ -1,4 +1,4 @@
-class CreateGalleriesAndPaintingTables < ActiveRecord::Migration
+class CreateGalleriesAndPaintingTables < ActiveRecord::Migration[6.1]
   def change
     create_table :galleries, :force => true do |t|
       t.string :name

@@ -2,32 +2,31 @@
 %html
   %head
     %title Chuckvanhorn
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_pack_tag "application"
     = csrf_meta_tags
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.brand{:href => "#"}
-            Chuck Van Horn
-          %ul.nav
-            %li
+    %nav.navbar.navbar-dark.bg-dark.navbar-expand-lg.fixed-top
+      .container
+        .navbar-header
+          %a.brand{:href => "#"} Chuck Van Horn
+        #navbar.nav.navbar-nav
+          %ul.nav.navbar-nav.mr-auto.mt-2.mt-lg-0
+            %li.nav-item
               %a{:href => root_url} Home
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %li.dropdown.nav-item
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :role => "button", :aria-haspopup => "true", :aria-expanded => "false"}
                 Galleries
                 %b.caret
-              %ul.dropdown-menu
+              %ul.dropdown-menu.text-white.bg-dark
                 - Gallery.where("name IN ('Gallery 1', 'Gallery 2')").order('name ASC').each do |gallery|
                   %li
                     = link_to gallery.name, gallery_path(gallery)
-
-            %li= link_to 'Portraits', portraits_path
-            %li= link_to 'Biography', biography_path
-            %li= link_to 'Blog', blog_path
-            %li= link_to 'Links', links_path
-            %li= link_to 'Workshops', workshops_path
+            %li.nav-item= link_to 'Portraits', portraits_path
+            %li.nav-item= link_to 'Biography', biography_path
+            %li.nav-item= link_to 'Blog', blog_path
+            %li.nav-item= link_to 'Links', links_path
+            %li.nav-item= link_to 'Workshops', workshops_path
 
     .container
       = yield

@@ -1,3 +1,40 @@
+# SQLite. Versions 3.8.0 and up are supported.
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: chuckvanhorn_development
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: chuckvanhorn_test
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+
+production:
+  <<: *default
+  database: chuckvanhorn_production
+  username: chuckvanhorn
+  password:
+
 # PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
@@ -12,13 +49,7 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: chuckvanhorn_development
-  pool: 5
-  username: chuckvanhorn
-  password:
+
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -38,21 +69,3 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test: &test
-  adapter: postgresql
-  encoding: unicode
-  database: chuckvanhorn_test
-  pool: 5
-  username: chuckvanhorn
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: chuckvanhorn_production
-  pool: 5
-  username: chuckvanhorn
-  password:
-
-cucumber:
-  <<: *test

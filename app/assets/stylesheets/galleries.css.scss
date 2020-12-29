@@ -1,19 +1,30 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
 #gallery {
-  @include makeColumn(10,1)
+  @include make-col(10,1)
 }
 
 #info {
-  @include makeColumn(6);
+  @include make-col(6);
   margin-left: 0;
   float: left;
 }
 
 #slideshow {
-  @include makeColumn(4);
+  @include make-col(4);
   float: left;
 }
 
+ul.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  clear: left;
+}
+
 li.painting {
+  list-style: none;
   .thumbnail {
     @include border-radius(0);
     border-color: #333;
@@ -35,9 +46,8 @@ li.painting {
 }
 
 #portraits {
-  @include makeColumn(10,1);
+  @include make-col(10,1);
   li.painting .thumbnail {
     height: 270px;
   }
 }
-

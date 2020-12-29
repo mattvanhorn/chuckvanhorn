@@ -1,4 +1,8 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
 #painting {
-  @include makeColumn(12);
+  @include make-col(12);
   text-align: center;
 }

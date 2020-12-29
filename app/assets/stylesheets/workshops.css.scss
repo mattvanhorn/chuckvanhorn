@@ -1,11 +1,15 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
 #workshops {
-  @include makeColumn(8,2);
+  @include make-col(8,2);
   #events {
-    @include makeColumn(5);
+    @include make-col(5);
     margin-left: 0;
   }
   #images {
-    @include makeColumn(3);
+    @include make-col(3);
   }
 
   figcaption {

@@ -1,0 +1,24 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+html {
+
+  body {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    background: #000;
+    color: #FFF;
+  }
+}
+#home {
+  @include make-col(8,2);
+  color: #FFF;
+  background: image-url('portrait.jpg') top right no-repeat;
+}
+#bio {
+  @include make-col(4);
+}
+#signature {
+  margin: 90px 0;
+}

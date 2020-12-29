@@ -2,10 +2,10 @@ class GalleriesController < ApplicationController
   expose :gallery
 
   def show
-    exhibit_exposed :gallery
+    self.gallery = exhibit(gallery)
   end
 
   def portraits
-    exhibit_exposed :gallery
+    self.gallery = exhibit(gallery)
   end
 end

@@ -1,7 +1,7 @@
 # gallery.rb
-class Gallery < ActiveRecord::Base
-  attr_accessible :name,
-                  :painting_ids
+class Gallery < ApplicationRecord
+  # attr_accessible :name,
+  #                 :painting_ids
   has_many :paintings
 
   def painting_ids=(ids)
