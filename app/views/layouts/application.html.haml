@@ -19,7 +19,7 @@
                 Galleries
                 %b.caret
               %ul.dropdown-menu.text-white.bg-dark
-                - Gallery.where("name IN ('Gallery 1', 'Gallery 2')").order('name ASC').each do |gallery|
+                - Gallery.where("name <> 'Portraits'").order('name ASC').each do |gallery|
                   %li
                     = link_to gallery.name, gallery_path(gallery)
             %li.nav-item= link_to 'Portraits', portraits_path
