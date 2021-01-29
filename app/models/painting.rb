@@ -14,5 +14,6 @@ class Painting < ApplicationRecord
   belongs_to :gallery
 
   mount_uploader :image, PaintingImageUploader
+  validates_presence_of :image
   default_scope { order(:position) }
 end
