@@ -7,7 +7,7 @@ ruby '2.6.3'
 gem 'rails', '~> 6.1.0'
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem "haml-rails", "~> 2.0"
