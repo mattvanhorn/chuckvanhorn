@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'simple_form'
-gem 'decent_exposure', :git => 'https://github.com/voxdolo/decent_exposure.git', :branch => 'master'
+gem 'decent_exposure', '~> 3.0'
 gem 'responders'
 gem 'carrierwave'
 gem 'fog'
@@ -38,6 +38,7 @@ gem 'display_case'
 gem 'dalli'
 gem 'rails_admin', '~> 2.0'
 gem 'ckeditor', '~> 5.1'
+gem 'mimemagic', '~> 0.3.10'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
